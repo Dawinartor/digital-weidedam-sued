@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column; /* Added flex-direction to align items vertically */
+        height: 100vh;
+        background-color: #f4f4f4;
+        background-color: #2d2d2d;
+        font-family: Arial, sans-serif;
+      }
+
+      h2 {
+        color: #fff; /* Added color to the title */
+        margin-bottom: 20px; /* Added margin for spacing */
+      }
+
+      .circles-container {
+        display: flex;
+      }
+
+      .circle {
+        position: relative;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin-right: 8px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        transition: background-color 0.3s;
+        position: relative;
+      }
+
+      .circle:hover {
+        background-color: #555;
+      }
+
+      .circle:hover::before {
+        content: attr(data-tooltip);
+        position: absolute;
+        background-color: #333;
+        color: #fff;
+        padding: 5px;
+        border-radius: 5px;
+        bottom: 120%;
+        left: 50%;
+        transform: translateX(-50%);
+        white-space: nowrap;
+      }
+
+      .red {
+        background-color: red;
+        color: white;
+      }
+
+      .green {
+        background-color: green;
+        color: white;
+      }
+    </style>
+    <title>Weidedamm-Süd</title>
+  </head>
+  <body>
+    <h2>Weidedamm-Süd</h2>
+    <div class="circles-container">
+      <div class="circle" id="circle1" data-tooltip="غسالة 1">
+        <span>1</span>
+      </div>
+      <div class="circle" id="circle2" data-tooltip="Essiccatore 2">
+        <span>2</span>
+      </div>
+      <div class="circle" id="circle3" data-tooltip="Стиральная машина 3">
+        <span>3</span>
+      </div>
+      <div class="circle" id="circle4" data-tooltip="ドライヤー 4">
+        <span>4</span>
+      </div>
+      <div class="circle" id="circle5" data-tooltip="Lavadora 5">
+        <span>5</span>
+      </div>
+      <div class="circle" id="circle6" data-tooltip="건조기 6">
+        <span>6</span>
+      </div>
+      <div class="circle" id="circle7" data-tooltip="सफ़ाई मशीन 7">
+        <span>7</span>
+      </div>
+      <div class="circle" id="circle8" data-tooltip="خشک کن 8">
+        <span>8</span>
+      </div>
+    </div>
+
+    <script>
+      function getRandomColor() {
+        return Math.random() < 0.5 ? 'red' : 'green';
+      }
+
+      function changeCircleColor(circleId) {
+        const circle = document.getElementById(circleId);
+        const newColor = getRandomColor();
+
+        circle.classList.remove('red', 'green');
+        circle.classList.add(newColor);
+      }
+
+      function randomizeColors() {
+        setInterval(() => {
+          for (let i = 1; i <= 8; i++) {
+            changeCircleColor('circle' + i);
+          }
+        }, 1500);
+      }
+
+      randomizeColors();
+    </script>
+  </body>
+</html>
