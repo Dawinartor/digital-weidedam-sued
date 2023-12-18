@@ -1,12 +1,12 @@
 # Idea of this project
 ![Current solution in laundry room](readme/The_analog_version.jpeg)
 The current issue involves the inconvenience of checking washing machine availability at a pay station located next to the machines, causing frustration and wasted time, especially for residents on higher floors.
-![first version of the solution](readme/application_demo_01.mov)
+![first version of the solution](readme/application_demo_01.gif)
 A proposed solution suggests making information on machine availability accessible online via a website, enabling users to check beforehand and streamline the laundry process, presenting a convenient and efficient resolution.
-
-## Enhanced functions
-A simple further development could display the status of all machines in real time. An advanced version of the application could provide detailed device information such as device type in addition to availability information. To further improve user-friendliness, translations could also be implemented in all the languages represented.
-
+A simple further development could display the status of all machines in real time. 
+![first version of the solution](readme/application_demo_02.gif)
+An advanced version of the application could provide detailed device information such as device type in addition to availability information.
+To further improve user-friendliness, translations could also be implemented in all the languages represented.
 
 ### The Weidedamm-Süd laundry room
 Eight appliances are available in the laundry room, including four dryers and four washing machines. 
